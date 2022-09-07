@@ -8,6 +8,10 @@ import (
 func main() {
 	var someString string
 	var SomeInt int
+	SomeInt = 2
+	SomeInt *= 2 // 2*2 = 4
+	SomeInt++    // SomeInt = SomeInt + 1
+	SomeInt--    // SomeInt = SomeInt - 1
 	var someUint uint
 	var SomeUintptr uintptr
 	var someFloat32 float32
