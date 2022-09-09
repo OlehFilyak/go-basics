@@ -12,6 +12,12 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Println(message, isEnter)
+
+	// INITIALIZATION IN IF BLOCK
+	a := 0.10000001                        // float64
+	if b := float32(a); b > float32(0.1) { // initialization and main condition
+		fmt.Println("Var a is GT float32(0.1)")
+	}
 }
 
 func enterTheClub(age int) (string, bool, error) {
