@@ -12,6 +12,30 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Println(message)
+
+	// declaration of a local variable in the middle of the block
+	i := 6
+	switch j := i % 5; {
+	case j == 0:
+		fmt.Println("Кратно 5")
+	default:
+		fmt.Printf("Остаток от деления на 5: %d", j)
+	}
+
+	// EXAMPLE FALLTHROUGH
+	a := -100
+	switch {
+	case a > 0:
+		if a%2 == 0 {
+			break
+		}
+		fmt.Println("Odd positive value received")
+	case a < 0:
+		fmt.Println("Negative value received")
+		fallthrough // can use only in last block
+	default:
+		fmt.Println("Default value handling")
+	}
 }
 
 func dailyWish(dayOfWeek string) (string, error) {
