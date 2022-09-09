@@ -7,24 +7,24 @@ import (
 func main() {
 	// LABELS BREAK, CONTINUE, GOTO
 
-	// BREAK
-outerLoopLabelBreak:
-	for i := 0; i < 5; i++ {
-		for j := 0; j < 5; j++ {
-			fmt.Printf("[%d, %d]\n", i, j)
-			break outerLoopLabelBreak // Here break outerLoopLabelBreak interrupts the execution of the outer loop.
-		}
-	}
-	fmt.Println("End")
+	// 	// BREAK
+	// outerLoopLabelBreak:
+	// 	for i := 0; i < 5; i++ {
+	// 		for j := 0; j < 5; j++ {
+	// 			fmt.Printf("[%d, %d]\n", i, j)
+	// 			break outerLoopLabelBreak // Here break outerLoopLabelBreak interrupts the execution of the outer loop.
+	// 		}
+	// 	}
+	// 	fmt.Println("End")
 
-outerLoopLabelContinue:
-	for i := 0; i < 5; i++ {
-		for j := 0; j < 5; j++ {
-			fmt.Printf("[%d, %d]\n", i, j)
-			continue outerLoopLabelContinue // Here continue outerLoopLabelContinue causes the transition to the next iteration of the outer loop.
-		}
-	}
-	fmt.Println("End")
+	// outerLoopLabelContinue:
+	// 	for i := 0; i < 5; i++ {
+	// 		for j := 0; j < 5; j++ {
+	// 			fmt.Printf("[%d, %d]\n", i, j)
+	// 			continue outerLoopLabelContinue // Here continue outerLoopLabelContinue causes the transition to the next iteration of the outer loop.
+	// 		}
+	// 	}
+	// 	fmt.Println("End")
 
 	// EVEN NUMBERS
 	group := 0
