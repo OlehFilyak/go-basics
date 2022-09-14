@@ -1,76 +1,32 @@
 package main
 
 import (
-	"errors"
 	"fmt"
 )
 
 func main() {
-	// thisWeekTemp := [7]int {-3,5,7} // [-3 5 7 0 0 0 0]
-	// rgbColor := [3]uint8 {255,255,128} // [255 255 128]
 
-	// rgbColor := [...]uint8{255,255,128} // [255 255 128] len = 3
-	// rgbaColor := [...]uint8{255,255,128,1} // [255 255 128 1] len = 4
+	// DECLARATION
+	var arrayWithZeroValues [3]int
+	fmt.Println("arrayWithZeroValues is", arrayWithZeroValues)
 
-	// thisWeekTemp := [7]int{6: 11, 2: 3} // [0 0 3 0 0 0 0 11]
-	// fmt.Println(thisWeekTemp)
+	// ARRAY LITERAL
+	var arrayLiteral = [3]int{10, 20, 30}
+	fmt.Println("arrayLiteral is", arrayLiteral)
+	var arrayLiteral1 = [...]int{10, 20, 30}
+	fmt.Println("arrayLiteral == arrayLiteral1?", arrayLiteral == arrayLiteral1)
 
-	// // Multivariate arrays
-	// var thisMonthTemp [4][7]int
-	// fmt.Println(thisMonthTemp)
+	// CHANGE THE VALUE AND READ THE VALUE
+	arrayLiteral[1] = 99
+	fmt.Println(arrayLiteral[1])
+	fmt.Println(arrayLiteral[2])
 
-	//TASK calculate the average temperatures for the week
-	// var weekTemp = [7]int{5, 4, 6, 8, 11, 9, 5}
+	// SPARSE ARRAY
+	var sparseArray = [12]int{1, 5: 4, 6, 10: 100, 15}
+	fmt.Println("sparseArray is", sparseArray)
 
-	// sumTemp := 0
+	//MULTIDEMENSIONAL ARRAYS
+	var multidemensionalArrays [2][3]int
+	fmt.Println("multidemensionalArrays is", multidemensionalArrays)
 
-	// for i := 0; i < len(weekTemp); i++ {
-	// 	sumTemp += weekTemp[i]
-	// }
-
-	// average := sumTemp / len(weekTemp)
-
-	var weekTemp = [7]int{5, 4, 6, 8, 11, 9, 5}
-
-	sumTemp := 0
-
-	for _, temp := range weekTemp {
-		sumTemp += temp
-	}
-
-	average := sumTemp / len(weekTemp)
-	fmt.Println(average)
-
-	// change all elements of array to zero
-	// var weekTemp = [7]int{5, 4, 6, 8, 11, 9, 5}
-	// // weekTemp [5 4 6 8 11 9 5]
-	// for _, temp := range weekTemp {
-	// temp = 0
-	// }
-	// // weekTemp [5 4 6 8 11 9 5] ! - values have not changed
-	// // if the value of the element is not used, you can omit the second variable
-	// for i := range weekTemp {
-	// weekTemp[i] = 0
-	// }
-	// // weekTemp [0 0 0 0 0 0] ! - values have changed
-
-	messagesArray := [3]string{"1", "2", "3"}
-	empty := [3]int{}
-
-	fmt.Println(messagesArray)
-	fmt.Println(messagesArray[1])
-	messagesArray[1] = "777"
-	fmt.Println(messagesArray)
-	fmt.Println(empty)
-	printMessagesArray(messagesArray)
-	fmt.Println(messagesArray)
-}
-
-func printMessagesArray(messagesArrayCopy [3]string) error {
-	if len(messagesArrayCopy) == 0 {
-		return errors.New("empty array")
-	}
-	messagesArrayCopy[1] = "999"
-	fmt.Println(messagesArrayCopy)
-	return nil
 }
