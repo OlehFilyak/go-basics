@@ -31,8 +31,8 @@ func main() {
 	// fmt.Println(d)
 	switch {
 	case b != c && c != d && b != d:
-		fmt.Println("No")
+		fmt.Println("YES")
 	default:
-		fmt.Println("Yes")
+		fmt.Println("NO")
 	}
 }
