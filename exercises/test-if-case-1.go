@@ -24,11 +24,11 @@ func main() {
 	fmt.Scan(&a)
 
 	b := a % 10
-	fmt.Println(b)
+	// fmt.Println(b)
 	c := (a - b) / 10 % 10
-	fmt.Println(c)
-	d := (a - c) / 10 % 10
-	fmt.Println(d)
+	// fmt.Println(c)
+	d := (a - b - (c * 10)) / 100
+	// fmt.Println(d)
 
 	if b == c && c == d && b == d {
 		fmt.Println("Yes")
