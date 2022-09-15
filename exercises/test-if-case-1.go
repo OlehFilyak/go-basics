@@ -29,10 +29,10 @@ func main() {
 	// fmt.Println(c)
 	d := (a - b - (c * 10)) / 100
 	// fmt.Println(d)
-
-	if b == c && c == d && b == d {
+	switch {
+	case b != c && c != d && b != d:
+		fmt.Println("No")
+	default:
 		fmt.Println("Yes")
-		return
 	}
-	fmt.Println("No")
 }
