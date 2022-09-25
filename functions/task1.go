@@ -12,6 +12,10 @@ import "fmt"
 // Sample Output:
 // 4
 
+func main() {
+	minimumFromFour()
+}
+
 func minimumFromFour() int {
 	//print your code here
 	var a, b, c, d int
